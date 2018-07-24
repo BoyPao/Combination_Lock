@@ -1,0 +1,8 @@
+xst -intstyle ise -ifn "E:/VHDL/final/combination_lock/combination_lock.xst" -ofn "E:/VHDL/final/combination_lock/combination_lock.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc combination_lock.ucf -p xc6slx16-csg324-2 combination_lock.ngc combination_lock.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o combination_lock_map.ncd combination_lock.ngd combination_lock.pcf 
+par -w -intstyle ise -ol high -mt off combination_lock_map.ncd combination_lock.ncd combination_lock.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml combination_lock.twx combination_lock.ncd -o combination_lock.twr combination_lock.pcf -ucf combination_lock.ucf 
+bitgen -intstyle ise -f combination_lock.ut combination_lock.ncd 
+xst -intstyle ise -ifn "E:/VHDL/final/combination_lock/combination_lock.xst" -ofn "E:/VHDL/final/combination_lock/combination_lock.syr" 
+xst -intstyle ise -ifn "E:/VHDL/final/combination_lock/combination_lock.xst" -ofn "E:/VHDL/final/combination_lock/combination_lock.syr" 

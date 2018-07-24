@@ -1,0 +1,1 @@
+vhdtdtfi -prj lab3 -o E:/VHDL/lab31/lab3/display.tfi -module display -template D:/ProgramFiles/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror -lib work display.vhd 

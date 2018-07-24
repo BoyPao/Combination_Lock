@@ -1,0 +1,731 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: combination_lock.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "combination_lock.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "combination_lock"
+Output Format                      : NGC
+Target Device                      : xc6slx4-2-tqg144
+
+---- Source Options
+Top Module Name                    : combination_lock
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "E:\VHDL\final\combination_lock\display.vhd" into library work
+Parsing entity <display>.
+Parsing architecture <Behavioral> of entity <display>.
+Parsing VHDL file "E:\VHDL\final\combination_lock\combination_lock.vhd" into library work
+Parsing entity <combination_lock>.
+Parsing architecture <Behavioral> of entity <combination_lock>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <combination_lock> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <display> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "E:\VHDL\final\combination_lock\combination_lock.vhd" Line 1058. Case statement is complete. others clause is never selected
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <combination_lock>.
+    Related source file is "E:\VHDL\final\combination_lock\combination_lock.vhd".
+    Set property "LOC = B8,C4,A8,D9,C9" for signal <button>.
+    Set property "LOC = T5,V8,U8,N8,M8,V9,T9,T10" for signal <switches>.
+    Set property "LOC = T11,R11,N11,M11,V15,U15,V16,U16" for signal <leds>.
+    Set property "LOC = P17,P18,N15,N16" for signal <digit>.
+    Set property "LOC = M13,L14,N14,M14,U18,U17,T18,T17" for signal <segments>.
+    Set property "LOC = V10" for signal <clk>.
+WARNING:Xst:647 - Input <switches<7:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 2-bit register for signal <clkone>.
+    Found 2-bit register for signal <clkhalf>.
+    Found 6-bit register for signal <state_reg>.
+    Found 4-bit register for signal <timescount>.
+    Found 4-bit register for signal <times>.
+    Found 40-bit register for signal <Code>.
+    Found 16-bit register for signal <Birthday>.
+    Found 5-bit register for signal <sw_ninth>.
+    Found 5-bit register for signal <sw_eighth>.
+    Found 5-bit register for signal <sw_seventh>.
+    Found 5-bit register for signal <sw_sixth>.
+    Found 5-bit register for signal <sw_fifth>.
+    Found 5-bit register for signal <sw_forth>.
+    Found 5-bit register for signal <sw_third>.
+    Found 5-bit register for signal <sw_second>.
+    Found 5-bit register for signal <sw_first>.
+    Found 5-bit register for signal <sw_zero>.
+    Found 1-bit register for signal <pass>.
+    Found 2-bit register for signal <situation>.
+    Found 5-bit register for signal <show_third>.
+    Found 5-bit register for signal <show_second>.
+    Found 5-bit register for signal <show_first>.
+    Found 5-bit register for signal <show_zero>.
+    Found 8-bit register for signal <leds>.
+    Found 5-bit register for signal <sw_zero_write>.
+    Found 5-bit register for signal <sw_first_write>.
+    Found 5-bit register for signal <sw_second_write>.
+    Found 5-bit register for signal <sw_third_write>.
+    Found 5-bit register for signal <sw_fourth_write>.
+    Found 5-bit register for signal <sw_fifth_write>.
+    Found 5-bit register for signal <sw_sixth_write>.
+    Found 5-bit register for signal <sw_seventh_write>.
+    Found 5-bit register for signal <sw_eighth_write>.
+    Found 5-bit register for signal <sw_ninth_write>.
+    Found 4-bit register for signal <digit>.
+    Found 5-bit register for signal <show>.
+    Found 32-bit register for signal <count>.
+INFO:Xst:1799 - State initial1 is never reached in FSM <state_reg>.
+    Found finite state machine <FSM_0> for signal <state_reg>.
+    -----------------------------------------------------------------------
+    | States             | 49                                             |
+    | Transitions        | 166                                            |
+    | Inputs             | 9                                              |
+    | Outputs            | 21                                             |
+    | Clock              | clkhalf<0> (rising_edge)                       |
+    | Power Up State     | initial                                        |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 32-bit adder for signal <count[31]_GND_5_o_add_3_OUT> created at line 99.
+    Found 2-bit adder for signal <clkone[1]_GND_5_o_add_7_OUT> created at line 107.
+    Found 2-bit adder for signal <clkhalf[1]_GND_5_o_add_9_OUT> created at line 111.
+    Found 4x4-bit Read Only RAM for signal <count[11]_GND_5_o_wide_mux_521_OUT>
+    Found 5-bit 4-to-1 multiplexer for signal <count[11]_show_third[4]_wide_mux_522_OUT> created at line 1045.
+    Found 4-bit comparator equal for signal <Code[3]_sw_reg[3]_equal_33_o> created at line 188
+    Found 8-bit comparator equal for signal <Code[7]_sw_reg[7]_equal_46_o> created at line 221
+    Found 12-bit comparator equal for signal <Code[11]_sw_reg[11]_equal_53_o> created at line 250
+    Found 16-bit comparator equal for signal <Code[15]_sw_reg[15]_equal_60_o> created at line 279
+    Found 16-bit comparator equal for signal <Birthday[15]_sw_reg[15]_equal_61_o> created at line 281
+    Found 20-bit comparator equal for signal <Code[19]_sw_reg[19]_equal_68_o> created at line 310
+    Found 24-bit comparator equal for signal <Code[23]_sw_reg[23]_equal_75_o> created at line 339
+    Found 28-bit comparator equal for signal <Code[27]_sw_reg[27]_equal_82_o> created at line 368
+    Found 32-bit comparator equal for signal <Code[31]_sw_reg[31]_equal_89_o> created at line 397
+    Found 36-bit comparator equal for signal <Code[35]_sw_reg[35]_equal_96_o> created at line 426
+    Found 40-bit comparator equal for signal <Code[39]_sw_reg[39]_equal_103_o> created at line 455
+    Found 4-bit comparator greater for signal <timescount[3]_times[3]_LessThan_326_o> created at line 876
+    Summary:
+	inferred   1 RAM(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred 240 D-type flip-flop(s).
+	inferred  12 Comparator(s).
+	inferred 321 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <combination_lock> synthesized.
+
+Synthesizing Unit <display>.
+    Related source file is "E:\VHDL\final\combination_lock\display.vhd".
+    Found 32x7-bit Read Only RAM for signal <segs<6:0>>
+    Summary:
+	inferred   1 RAM(s).
+Unit <display> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 32x7-bit single-port Read Only RAM                    : 1
+ 4x4-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 3
+ 2-bit adder                                           : 2
+ 32-bit adder                                          : 1
+# Registers                                            : 36
+ 1-bit register                                        : 1
+ 16-bit register                                       : 1
+ 2-bit register                                        : 3
+ 32-bit register                                       : 1
+ 4-bit register                                        : 3
+ 40-bit register                                       : 1
+ 5-bit register                                        : 25
+ 8-bit register                                        : 1
+# Comparators                                          : 12
+ 12-bit comparator equal                               : 1
+ 16-bit comparator equal                               : 2
+ 20-bit comparator equal                               : 1
+ 24-bit comparator equal                               : 1
+ 28-bit comparator equal                               : 1
+ 32-bit comparator equal                               : 1
+ 36-bit comparator equal                               : 1
+ 4-bit comparator equal                                : 1
+ 4-bit comparator greater                              : 1
+ 40-bit comparator equal                               : 1
+ 8-bit comparator equal                                : 1
+# Multiplexers                                         : 321
+ 1-bit 2-to-1 multiplexer                              : 13
+ 2-bit 2-to-1 multiplexer                              : 2
+ 4-bit 2-to-1 multiplexer                              : 2
+ 40-bit 2-to-1 multiplexer                             : 10
+ 5-bit 2-to-1 multiplexer                              : 293
+ 5-bit 4-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <Birthday_0> (without init value) has a constant value of 1 in block <combination_lock>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Birthday_1> (without init value) has a constant value of 0 in block <combination_lock>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Birthday_2> (without init value) has a constant value of 1 in block <combination_lock>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Birthday_3> (without init value) has a constant value of 0 in block <combination_lock>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Birthday_4> (without init value) has a constant value of 0 in block <combination_lock>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Birthday_5> (without init value) has a constant value of 0 in block <combination_lock>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Birthday_6> (without init value) has a constant value of 0 in block <combination_lock>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Birthday_7> (without init value) has a constant value of 0 in block <combination_lock>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Birthday_8> (without init value) has a constant value of 0 in block <combination_lock>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Birthday_9> (without init value) has a constant value of 0 in block <combination_lock>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Birthday_10> (without init value) has a constant value of 1 in block <combination_lock>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Birthday_11> (without init value) has a constant value of 0 in block <combination_lock>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Birthday_12> (without init value) has a constant value of 0 in block <combination_lock>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Birthday_13> (without init value) has a constant value of 1 in block <combination_lock>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Birthday_14> (without init value) has a constant value of 0 in block <combination_lock>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Birthday_15> (without init value) has a constant value of 0 in block <combination_lock>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <sw_zero_write_4> of sequential type is unconnected in block <combination_lock>.
+WARNING:Xst:2677 - Node <sw_third_write_4> of sequential type is unconnected in block <combination_lock>.
+WARNING:Xst:2677 - Node <sw_first_write_4> of sequential type is unconnected in block <combination_lock>.
+WARNING:Xst:2677 - Node <sw_second_write_4> of sequential type is unconnected in block <combination_lock>.
+WARNING:Xst:2677 - Node <sw_sixth_write_4> of sequential type is unconnected in block <combination_lock>.
+WARNING:Xst:2677 - Node <sw_fourth_write_4> of sequential type is unconnected in block <combination_lock>.
+WARNING:Xst:2677 - Node <sw_fifth_write_4> of sequential type is unconnected in block <combination_lock>.
+WARNING:Xst:2677 - Node <sw_ninth_write_4> of sequential type is unconnected in block <combination_lock>.
+WARNING:Xst:2677 - Node <sw_seventh_write_4> of sequential type is unconnected in block <combination_lock>.
+WARNING:Xst:2677 - Node <sw_eighth_write_4> of sequential type is unconnected in block <combination_lock>.
+WARNING:Xst:2404 -  FFs/Latches <sw_first_write<4:4>> (without init value) have a constant value of 0 in block <combination_lock>.
+WARNING:Xst:2404 -  FFs/Latches <sw_zero_write<4:4>> (without init value) have a constant value of 0 in block <combination_lock>.
+WARNING:Xst:2404 -  FFs/Latches <sw_second_write<4:4>> (without init value) have a constant value of 0 in block <combination_lock>.
+WARNING:Xst:2404 -  FFs/Latches <sw_fourth_write<4:4>> (without init value) have a constant value of 0 in block <combination_lock>.
+WARNING:Xst:2404 -  FFs/Latches <sw_third_write<4:4>> (without init value) have a constant value of 0 in block <combination_lock>.
+WARNING:Xst:2404 -  FFs/Latches <sw_fifth_write<4:4>> (without init value) have a constant value of 0 in block <combination_lock>.
+WARNING:Xst:2404 -  FFs/Latches <sw_seventh_write<4:4>> (without init value) have a constant value of 0 in block <combination_lock>.
+WARNING:Xst:2404 -  FFs/Latches <sw_sixth_write<4:4>> (without init value) have a constant value of 0 in block <combination_lock>.
+WARNING:Xst:2404 -  FFs/Latches <sw_eighth_write<4:4>> (without init value) have a constant value of 0 in block <combination_lock>.
+WARNING:Xst:2404 -  FFs/Latches <sw_ninth_write<4:4>> (without init value) have a constant value of 0 in block <combination_lock>.
+WARNING:Xst:2404 -  FFs/Latches <Birthday<15:14>> (without init value) have a constant value of 0 in block <combination_lock>.
+
+Synthesizing (advanced) Unit <combination_lock>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+The following registers are absorbed into counter <clkhalf>: 1 register on signal <clkhalf>.
+The following registers are absorbed into counter <clkone>: 1 register on signal <clkone>.
+INFO:Xst:3231 - The small RAM <Mram_count[11]_GND_5_o_wide_mux_521_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <count<11:10>>  |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <combination_lock> synthesized (advanced).
+
+Synthesizing (advanced) Unit <display>.
+INFO:Xst:3231 - The small RAM <Mram_segs<6:0>> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <number>        |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <segs>          |          |
+    -----------------------------------------------------------------------
+Unit <display> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 32x7-bit single-port distributed Read Only RAM        : 1
+ 4x4-bit single-port distributed Read Only RAM         : 1
+# Counters                                             : 3
+ 2-bit up counter                                      : 2
+ 32-bit up counter                                     : 1
+# Registers                                            : 192
+ Flip-Flops                                            : 192
+# Comparators                                          : 12
+ 12-bit comparator equal                               : 1
+ 16-bit comparator equal                               : 2
+ 20-bit comparator equal                               : 1
+ 24-bit comparator equal                               : 1
+ 28-bit comparator equal                               : 1
+ 32-bit comparator equal                               : 1
+ 36-bit comparator equal                               : 1
+ 4-bit comparator equal                                : 1
+ 4-bit comparator greater                              : 1
+ 40-bit comparator equal                               : 1
+ 8-bit comparator equal                                : 1
+# Multiplexers                                         : 325
+ 1-bit 2-to-1 multiplexer                              : 13
+ 1-bit 4-to-1 multiplexer                              : 5
+ 2-bit 2-to-1 multiplexer                              : 2
+ 4-bit 2-to-1 multiplexer                              : 2
+ 40-bit 2-to-1 multiplexer                             : 10
+ 5-bit 2-to-1 multiplexer                              : 293
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <Birthday_0> (without init value) has a constant value of 1 in block <combination_lock>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Birthday_1> (without init value) has a constant value of 0 in block <combination_lock>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Birthday_2> (without init value) has a constant value of 1 in block <combination_lock>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Birthday_3> (without init value) has a constant value of 0 in block <combination_lock>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Birthday_4> (without init value) has a constant value of 0 in block <combination_lock>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Birthday_5> (without init value) has a constant value of 0 in block <combination_lock>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Birthday_6> (without init value) has a constant value of 0 in block <combination_lock>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Birthday_7> (without init value) has a constant value of 0 in block <combination_lock>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Birthday_8> (without init value) has a constant value of 0 in block <combination_lock>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Birthday_9> (without init value) has a constant value of 0 in block <combination_lock>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Birthday_10> (without init value) has a constant value of 1 in block <combination_lock>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Birthday_11> (without init value) has a constant value of 0 in block <combination_lock>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Birthday_12> (without init value) has a constant value of 0 in block <combination_lock>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Birthday_13> (without init value) has a constant value of 1 in block <combination_lock>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <state_reg[1:48]> with one-hot encoding.
+--------------------------------------------------------------
+ State    | Encoding
+--------------------------------------------------------------
+ initial  | 000000000000000000000000000000000000000000000001
+ initial1 | unreached
+ digitnum | 000000000000000000000000000000000000000001000000
+ waiting  | 000000000000000000000000000000000000000000000010
+ waiting1 | 000000000000000000000000000000000000000000001000
+ input0   | 000000000000000000000000000000000000000000010000
+ input00  | 000000000000000000000000000000000000000010000000
+ input1   | 000000000000000000000000000000000000000100000000
+ input11  | 000000000000000000000000000000000000001000000000
+ input2   | 000000000000000000000000000000000000010000000000
+ input22  | 000000000000000000000000000000000000100000000000
+ input3   | 000000000000000000000000000000000001000000000000
+ input33  | 000000000000000000000000000000000010000000000000
+ input4   | 000000000000000000000000000000000100000000000000
+ input44  | 000000000000000000000000000000001000000000000000
+ input5   | 000000000000000000000000000000010000000000000000
+ input55  | 000000000000000000000000000000100000000000000000
+ input6   | 000000000000000000000000000001000000000000000000
+ input66  | 000000000000000000000000000010000000000000000000
+ input7   | 000000000000000000000000000100000000000000000000
+ input77  | 000000000000000000000000001000000000000000000000
+ input8   | 000000000000000000000000010000000000000000000000
+ input88  | 000000000000000000000000100000000000000000000000
+ input9   | 000000000000000000000001000000000000000000000000
+ input99  | 000000000000000000000010000000000000000000000000
+ final    | 000000000000000000000000000000000000000000000100
+ final1   | 000000000000000000000100000000000000000000000000
+ input0w  | 000000000000000000000000000000000000000000100000
+ input00w | 000000000000000000010000000000000000000000000000
+ input1w  | 000000000000000000100000000000000000000000000000
+ input11w | 000000000000000001000000000000000000000000000000
+ input2w  | 000000000000000010000000000000000000000000000000
+ input22w | 000000000000000100000000000000000000000000000000
+ input3w  | 000000000000001000000000000000000000000000000000
+ input33w | 000000000000010000000000000000000000000000000000
+ input4w  | 000000000000100000000000000000000000000000000000
+ input44w | 000000000001000000000000000000000000000000000000
+ input5w  | 000000000010000000000000000000000000000000000000
+ input55w | 000000000100000000000000000000000000000000000000
+ input6w  | 000000001000000000000000000000000000000000000000
+ input66w | 000000010000000000000000000000000000000000000000
+ input7w  | 000000100000000000000000000000000000000000000000
+ input77w | 000001000000000000000000000000000000000000000000
+ input8w  | 000010000000000000000000000000000000000000000000
+ input88w | 000100000000000000000000000000000000000000000000
+ input9w  | 001000000000000000000000000000000000000000000000
+ input99w | 010000000000000000000000000000000000000000000000
+ finalw   | 000000000000000000001000000000000000000000000000
+ final1w  | 100000000000000000000000000000000000000000000000
+--------------------------------------------------------------
+WARNING:Xst:2677 - Node <sw_ninth_4> of sequential type is unconnected in block <combination_lock>.
+WARNING:Xst:2677 - Node <sw_sixth_4> of sequential type is unconnected in block <combination_lock>.
+WARNING:Xst:2677 - Node <sw_eighth_4> of sequential type is unconnected in block <combination_lock>.
+WARNING:Xst:2677 - Node <sw_seventh_4> of sequential type is unconnected in block <combination_lock>.
+WARNING:Xst:2677 - Node <sw_fifth_4> of sequential type is unconnected in block <combination_lock>.
+WARNING:Xst:2677 - Node <sw_forth_4> of sequential type is unconnected in block <combination_lock>.
+WARNING:Xst:2677 - Node <sw_first_4> of sequential type is unconnected in block <combination_lock>.
+WARNING:Xst:2677 - Node <sw_third_4> of sequential type is unconnected in block <combination_lock>.
+WARNING:Xst:2677 - Node <sw_second_4> of sequential type is unconnected in block <combination_lock>.
+WARNING:Xst:2677 - Node <sw_zero_4> of sequential type is unconnected in block <combination_lock>.
+INFO:Xst:2261 - The FF/Latch <leds_4> in Unit <combination_lock> is equivalent to the following 3 FFs/Latches, which will be removed : <leds_5> <leds_6> <leds_7> 
+
+Optimizing unit <combination_lock> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block combination_lock, actual ratio is 24.
+FlipFlop state_reg_FSM_FFd5 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 250
+ Flip-Flops                                            : 250
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : combination_lock.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 634
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 31
+#      LUT2                        : 58
+#      LUT3                        : 26
+#      LUT4                        : 33
+#      LUT5                        : 75
+#      LUT6                        : 269
+#      MUXCY                       : 105
+#      VCC                         : 1
+#      XORCY                       : 32
+# FlipFlops/Latches                : 250
+#      FD                          : 59
+#      FDE                         : 155
+#      FDR                         : 32
+#      FDRE                        : 4
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 29
+#      IBUF                        : 9
+#      OBUF                        : 20
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx4tqg144-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             250  out of   4800     5%  
+ Number of Slice LUTs:                  495  out of   2400    20%  
+    Number used as Logic:               495  out of   2400    20%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    565
+   Number with an unused Flip Flop:     315  out of    565    55%  
+   Number with an unused LUT:            70  out of    565    12%  
+   Number of fully used LUT-FF pairs:   180  out of    565    31%  
+   Number of unique control sets:        33
+
+IO Utilization: 
+ Number of IOs:                          34
+ Number of bonded IOBs:                  30  out of    102    29%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clkhalf_0                          | BUFG                   | 205   |
+clk                                | BUFGP                  | 45    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 7.292ns (Maximum Frequency: 137.137MHz)
+   Minimum input arrival time before clock: 7.946ns
+   Maximum output required time after clock: 5.712ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clkhalf_0'
+  Clock period: 7.292ns (frequency: 137.137MHz)
+  Total number of paths / destination ports: 6999 / 320
+-------------------------------------------------------------------------
+Delay:               7.292ns (Levels of Logic = 6)
+  Source:            state_reg_FSM_FFd17 (FF)
+  Destination:       sw_first_0 (FF)
+  Source Clock:      clkhalf_0 rising
+  Destination Clock: clkhalf_0 rising
+
+  Data Path: state_reg_FSM_FFd17 to sw_first_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              19   0.525   1.369  state_reg_FSM_FFd17 (state_reg_FSM_FFd17)
+     LUT4:I2->O            4   0.250   0.804  state_reg__n1665<1>111 (state_reg__n1665<1>11)
+     LUT4:I3->O            1   0.254   0.682  state_reg_state_reg[5]_timescount[3]_wide_mux_458_OUT<1>1_SW1 (N109)
+     LUT6:I5->O            2   0.254   0.726  state_reg_state_reg[5]_timescount[3]_wide_mux_458_OUT<1>1 (state_reg_state_reg[5]_timescount[3]_wide_mux_458_OUT<1>1)
+     LUT5:I4->O            1   0.254   0.682  state_reg_state_reg<2>_SW1 (N105)
+     LUT6:I5->O            7   0.254   0.910  state_reg_state_reg<2> (state_reg<2>)
+     LUT2:I1->O            2   0.254   0.000  _n1795<4>1 (_n1795<4>)
+     FDE:D                     0.074          sw_first_0
+    ----------------------------------------
+    Total                      7.292ns (2.119ns logic, 5.173ns route)
+                                       (29.1% logic, 70.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.429ns (frequency: 155.547MHz)
+  Total number of paths / destination ports: 1848 / 85
+-------------------------------------------------------------------------
+Delay:               6.429ns (Levels of Logic = 3)
+  Source:            count_25 (FF)
+  Destination:       clkhalf_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: count_25 to clkhalf_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.525   1.181  count_25 (count_25)
+     LUT6:I0->O            1   0.254   1.112  count[31]_GND_5_o_equal_5_o<31>5 (count[31]_GND_5_o_equal_5_o<31>4)
+     LUT6:I1->O           36   0.254   1.587  count[31]_GND_5_o_equal_5_o<31>7 (count[31]_GND_5_o_equal_5_o)
+     LUT3:I2->O            4   0.254   0.803  _n113111 (_n11311)
+     FDRE:R                    0.459          clkhalf_0
+    ----------------------------------------
+    Total                      6.429ns (1.746ns logic, 4.683ns route)
+                                       (27.2% logic, 72.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clkhalf_0'
+  Total number of paths / destination ports: 1156 / 198
+-------------------------------------------------------------------------
+Offset:              7.946ns (Levels of Logic = 6)
+  Source:            button<1> (PAD)
+  Destination:       pass (FF)
+  Destination Clock: clkhalf_0 rising
+
+  Data Path: button<1> to pass
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            20   1.328   1.716  button_1_IBUF (button_1_IBUF)
+     LUT5:I0->O           20   0.254   1.741  button[4]_GND_5_o_equal_175_o<4>1 (button[4]_GND_5_o_equal_175_o)
+     LUT6:I0->O            1   0.254   0.910  state_reg__n2148_inv4 (state_reg__n2148_inv3)
+     LUT6:I3->O            2   0.235   0.726  state_reg__n2148_inv5 (_n2148_inv)
+     LUT5:I4->O            1   0.254   0.000  pass_rstpot_cy1_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_lut (pass_rstpot_cy1_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_lut)
+     MUXCY:S->O            1   0.454   0.000  pass_rstpot_cy1_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy (pass_rstpot)
+     FD:D                      0.074          pass
+    ----------------------------------------
+    Total                      7.946ns (2.853ns logic, 5.093ns route)
+                                       (35.9% logic, 64.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clkhalf_0'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              4.240ns (Levels of Logic = 1)
+  Source:            leds_4 (FF)
+  Destination:       leds<7> (PAD)
+  Source Clock:      clkhalf_0 rising
+
+  Data Path: leds_4 to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              4   0.525   0.803  leds_4 (leds_4)
+     OBUF:I->O                 2.912          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                      4.240ns (3.437ns logic, 0.803ns route)
+                                       (81.1% logic, 18.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 39 / 11
+-------------------------------------------------------------------------
+Offset:              5.712ns (Levels of Logic = 2)
+  Source:            show_2 (FF)
+  Destination:       segments<6> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: show_2 to segments<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               7   0.525   1.340  show_2 (show_2)
+     LUT5:I0->O            1   0.254   0.681  dd/Mram_segs<6:0>61 (segments_6_OBUF)
+     OBUF:I->O                 2.912          segments_6_OBUF (segments<6>)
+    ----------------------------------------
+    Total                      5.712ns (3.691ns logic, 2.021ns route)
+                                       (64.6% logic, 35.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    6.429|         |         |         |
+clkhalf_0      |    1.811|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clkhalf_0
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    6.307|         |         |         |
+clkhalf_0      |    7.292|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 12.67 secs
+ 
+--> 
+
+Total memory usage is 331848 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   62 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

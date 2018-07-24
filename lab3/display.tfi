@@ -1,0 +1,10 @@
+
+
+
+// Instantiate the module
+display instance_name (
+    .segs(segs), 
+    .number(number)
+    );
+
+

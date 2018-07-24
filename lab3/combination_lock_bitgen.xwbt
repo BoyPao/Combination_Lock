@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=U:\VHDL\final\lab3\combination_lock.ncd
+OUTFILE=U:\VHDL\final\lab3\combination_lock.bit
+FAMILY=Spartan6
+PART=xc6slx16-2csg324
+WORKINGDIR=U:\VHDL\final\lab3
+LICENSE=ISE
+USER_INFO=174114381_174166710_210593002_067

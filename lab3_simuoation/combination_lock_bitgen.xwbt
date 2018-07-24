@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\DELL\Desktop\final\lab3_simuoation\combination_lock.ncd
+OUTFILE=C:\Users\DELL\Desktop\final\lab3_simuoation\combination_lock.bit
+FAMILY=Spartan6
+PART=xc6slx16-2csg324
+WORKINGDIR=C:\Users\DELL\Desktop\final\lab3_simuoation
+LICENSE=WebPack
+USER_INFO=__0_0_0

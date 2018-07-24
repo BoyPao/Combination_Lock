@@ -1,0 +1,3 @@
+vhdl work "display.vhd"
+vhdl work "top.vhd"
+vhdl work "test.vhd"

@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "E:/VHDL/lab31/lab3/top.xst" -ofn "E:/VHDL/lab31/lab3/top.syr" 
